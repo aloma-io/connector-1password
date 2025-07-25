@@ -12,7 +12,7 @@ jobs:
     uses: aloma-io/.github/.github/workflows/docker-build-push.yml@main
     with:
       image_name: 'connector-1password'
-      dockerfile: 'Dockerfile'
+      dockerfile: 'Containerfile'
       context: '.'
       tags: ${{ github.ref_type == 'tag' && github.ref_name || 'latest' }}
     secrets: inherit
